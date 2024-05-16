@@ -11,7 +11,8 @@
   "dependencies": {
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "next": "14.2.3",
+    "canvas": "^2.11.2"
   },
   "devDependencies": {
     "typescript": "^5",
