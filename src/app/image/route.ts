@@ -1,7 +1,6 @@
 import { createCanvas, loadImage, registerFont } from "canvas";
 import { NextRequest } from "next/server";
 import backgroundImage from "../../../public/Frame.jpg";
-import font from "../../../public/JetBrainsMono-Bold.ttf";
 
 function breakTextIntoLines(ctx: any, text: string, maxWidth: number) {
   const words = text.split(" ");
@@ -27,6 +26,7 @@ const compositeImageWithText = async (text: string) => {
     // Load the image into canvas
     const canvas = createCanvas(backgroundImage.width, backgroundImage.height);
     const ctx = canvas.getContext("2d");
+    const font = "./public/Roboto-Regular.ttf";
     const image = await loadImage(backgroundImage.src);
     registerFont(font, { family: "CustomFont" });
     

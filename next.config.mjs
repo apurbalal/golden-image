@@ -4,7 +4,7 @@ const nextConfig = {
     if (isServer) {
       config.module.rules.push({
         test: /\.ttf$/,
-        use: "file-loader"
+        use: [{ loader: "file-loader" }]
       });
 
       return config;
