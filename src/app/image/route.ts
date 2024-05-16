@@ -27,7 +27,7 @@ const compositeImageWithText = async (text: string) => {
     const canvas = createCanvas(backgroundImage.width, backgroundImage.height);
     const ctx = canvas.getContext("2d");
     const font = "./public/Roboto-Regular.ttf";
-    const image = await loadImage(backgroundImage.src);
+    const image = await loadImage(process.env.NEXT_PUBLIC_VERCEL_URL+"/Frame.jpg");
     registerFont(font, { family: "CustomFont" });
     
     ctx.drawImage(image, 0, 0);
